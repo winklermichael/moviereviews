@@ -1,0 +1,27 @@
+
+name: IaC
+
+# Controls when the new movie hosting locations are created or updated
+on:
+  push:
+    branches: [ feature/english ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+ 
+  build:
+    runs-on: ubuntu-latest
+    environment: Vienna
+
+
+    steps:
+      - name: Add mask
+        run: |
+          echo "::add-mask::${{ secrets.FAVOURITES }}" 
+
+      - name: You live in the following environment 
+        run: echo ${{ secrets.FAVOURITES }}

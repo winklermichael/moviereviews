@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Add mask
         run: |
-          echo "::add-mask::${{ secrets.FAVOURITES }}" 
+          echo "::add-mask::${{ secrets.FAVOURITE }}" 
 
       - name: You live in the following environment 
-        run: echo ${{ secrets.FAVOURITES }}
+        run: echo ${{ secrets.FAVOURITE }}

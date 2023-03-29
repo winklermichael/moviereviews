@@ -23,5 +23,5 @@ jobs:
         run: |
           echo "::add-mask::${{ secrets.FAVOURITE }}" 
 
-      - name: You live in the following environment 
+      - name: I ll tell you my current favourite 
         run: echo ${{ secrets.FAVOURITE }}

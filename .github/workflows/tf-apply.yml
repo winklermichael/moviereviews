@@ -1,5 +1,5 @@
 
-name: IaC
+name: IaC Pipeline
 
 # Controls when the new movie hosting locations are created or updated
 on:

